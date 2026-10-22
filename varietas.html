@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ensiklopedia Varietas Cabe & Skala Scoville - CabePedia</title>
+  <meta name="description" content="Katalog lengkap varietas cabe nusantara dan dunia. Pelajari tingkat kepedasan Scoville (SHU), aroma rasa, dan komparasi cabe secara interaktif.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌶️</text></svg>">
+</head>
+<body>
+  <div class="ambient-glow"></div>
+
+  <!-- Site Navigation -->
+  <header class="site-header">
+    <div class="container navbar">
+      <a href="index.html" class="brand-logo" id="logoLink">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 14.5c0 .83-.67 1.5-1.5 1.5S10 17.33 10 16.5V11c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5v5.5zm4.5-3c0 .83-.67 1.5-1.5 1.5s-1.5-.67-1.5-1.5V11c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5v2.5zM12 7.5c-.83 0-1.5-.67-1.5-1.5S11.17 4.5 12 4.5s1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/>
+        </svg>
+        <span>Cabe<span class="dot">Pedia</span></span>
+      </a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" class="nav-link">Beranda</a></li>
+        <li><a href="varietas.html" class="nav-link active">Varietas & Scoville</a></li>
+        <li><a href="budidaya.html" class="nav-link">Panduan Budidaya</a></li>
+        <li><a href="kuliner.html" class="nav-link">Resep Sambal</a></li>
+        <li><a href="kontak.html" class="nav-link">Lab & Kuis Pedas</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <a href="kontak.html" class="btn btn-primary btn-sm" id="ctaHeaderBtn">Uji Toleransi Pedas</a>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Menu Navigasi">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main style="padding: 60px 0 100px;">
+    <div class="container">
+      <!-- Section Header -->
+      <div class="section-header">
+        <span class="badge">Katalog & Tingkat Kepedasan</span>
+        <h1>Ensiklopedia <span class="text-gradient">Varietas Cabai</span></h1>
+        <p>
+          Telusuri profil lengkap varietas cabai terunggul dari penjuru Nusantara hingga monster pemecah rekor dunia.
+        </p>
+      </div>
+
+      <!-- Filter and Search Toolbar -->
+      <div class="filter-bar">
+        <div class="filter-pills" role="toolbar" aria-label="Filter Varietas Cabe">
+          <button class="filter-btn active" data-filter="all">Semua Cabai</button>
+          <button class="filter-btn" data-filter="lokal">🇮🇩 Nusantara</button>
+          <button class="filter-btn" data-filter="dunia">🌎 Mancanegara</button>
+          <button class="filter-btn" data-filter="mild">Ringan (&lt;10k)</button>
+          <button class="filter-btn" data-filter="medium">Sedang (10k-50k)</button>
+          <button class="filter-btn" data-filter="hot">Pedas (50k-100k)</button>
+          <button class="filter-btn" data-filter="extreme">Sangat Pedas (&gt;100k)</button>
+          <button class="filter-btn" data-filter="insane">🔥 Brutal (&gt;800k)</button>
+        </div>
+
+        <div class="search-box">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+          </svg>
+          <input type="text" id="searchChili" placeholder="Cari cabai, daerah, latin..." aria-label="Cari varietas cabe" />
+        </div>
+      </div>
+
+      <!-- Chili Cards Dynamic Grid -->
+      <div class="grid-3" id="chiliCardsContainer" style="margin-bottom: 60px;">
+        <!-- Akan di-render secara interaktif oleh js/varietas.js -->
+      </div>
+
+      <!-- Interactive Scoville Comparator Section -->
+      <section class="comparator-box" id="comparatorSection">
+        <div style="text-align: center; margin-bottom: 30px;">
+          <span class="badge" style="margin-bottom: 8px;">Fitur Interaktif Eksklusif</span>
+          <h2 style="font-size: 1.8rem;">Head-to-Head: Komparator Tingkat Kepedasan</h2>
+          <p style="color: var(--text-muted); font-size: 0.95rem;">
+            Pilih dua jenis cabai untuk mengomparasikan level Scoville Heat Unit (SHU) dan profil rasanya secara langsung.
+          </p>
+        </div>
+
+        <div class="comparator-grid">
+          <!-- Chili A Slot -->
+          <div class="compare-slot">
+            <label for="compareChiliA" style="display: block; font-size: 0.85rem; color: var(--text-dim); margin-bottom: 6px;">PILIH CABAI PERTAMA:</label>
+            <select id="compareChiliA"></select>
+            <div id="previewCompareA" class="compare-preview"></div>
+          </div>
+
+          <!-- VS Badge -->
+          <div class="comparator-vs">VS</div>
+
+          <!-- Chili B Slot -->
+          <div class="compare-slot">
+            <label for="compareChiliB" style="display: block; font-size: 0.85rem; color: var(--text-dim); margin-bottom: 6px;">PILIH CABAI KEDUA:</label>
+            <select id="compareChiliB"></select>
+            <div id="previewCompareB" class="compare-preview"></div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- Chili Detail Modal Backdrop -->
+  <div class="modal-backdrop" id="chiliModal" role="dialog" aria-modal="true">
+    <div class="modal-dialog">
+      <button class="modal-close" onclick="closeChiliModal()" aria-label="Tutup Detail">
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" style="width: 20px; height: 20px;">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+        </svg>
+      </button>
+      <div id="modalContent"></div>
+    </div>
+  </div>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand-logo">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 14.5c0 .83-.67 1.5-1.5 1.5S10 17.33 10 16.5V11c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5v5.5zm4.5-3c0 .83-.67 1.5-1.5 1.5s-1.5-.67-1.5-1.5V11c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5v2.5zM12 7.5c-.83 0-1.5-.67-1.5-1.5S11.17 4.5 12 4.5s1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/>
+            </svg>
+            <span>Cabe<span class="dot">Pedia</span></span>
+          </a>
+          <p>
+            Media edukasi dan ensiklopedia interaktif terdepan yang mendokumentasikan kekayaan cabai Nusantara dan dunia.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navigasi</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="varietas.html">Katalog Varietas</a></li>
+            <li><a href="budidaya.html">Panduan Budidaya</a></li>
+            <li><a href="kuliner.html">Koleksi Resep Sambal</a></li>
+            <li><a href="kontak.html">Lab & Kuis Pedas</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Koleksi Cabai</h4>
+          <ul class="footer-links">
+            <li><a href="varietas.html">Cabe Rawit Merah</a></li>
+            <li><a href="varietas.html">Cabe Katokkon Toraja</a></li>
+            <li><a href="varietas.html">Cabe Hiyung Banjar</a></li>
+            <li><a href="varietas.html">Jalapeño Meksiko</a></li>
+            <li><a href="varietas.html">Carolina Reaper</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Tautan Pintas</h4>
+          <ul class="footer-links">
+            <li><a href="budidaya.html">Kalkulator Media Tanam</a></li>
+            <li><a href="kuliner.html">Resep Sambal Matah</a></li>
+            <li><a href="kontak.html">Uji Toleransi Pedas</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 CabePedia Indonesia. Seluruh hak cipta dilindungi.</p>
+        <p>Eksplorasi Skala Scoville & Varietas Cabai Nusantara.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/varietas.js"></script>
+</body>
+</html>

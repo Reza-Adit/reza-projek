@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Master Resep Sambal Nusantara & Kuliner Pedas - CabePedia</title>
+  <meta name="description" content="Koleksi resep sambal tradisional khas Indonesia: Sambal Bawang, Sambal Matah, Sambal Terasi, dan Sambal Ijo dengan kalkulator porsi bahan otomatis.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌶️</text></svg>">
+</head>
+<body>
+  <div class="ambient-glow"></div>
+
+  <!-- Site Navigation -->
+  <header class="site-header">
+    <div class="container navbar">
+      <a href="index.html" class="brand-logo" id="logoLink">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 14.5c0 .83-.67 1.5-1.5 1.5S10 17.33 10 16.5V11c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5v5.5zm4.5-3c0 .83-.67 1.5-1.5 1.5s-1.5-.67-1.5-1.5V11c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5v2.5zM12 7.5c-.83 0-1.5-.67-1.5-1.5S11.17 4.5 12 4.5s1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/>
+        </svg>
+        <span>Cabe<span class="dot">Pedia</span></span>
+      </a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" class="nav-link">Beranda</a></li>
+        <li><a href="varietas.html" class="nav-link">Varietas & Scoville</a></li>
+        <li><a href="budidaya.html" class="nav-link">Panduan Budidaya</a></li>
+        <li><a href="kuliner.html" class="nav-link active">Resep Sambal</a></li>
+        <li><a href="kontak.html" class="nav-link">Lab & Kuis Pedas</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <a href="kontak.html" class="btn btn-primary btn-sm" id="ctaHeaderBtn">Uji Toleransi Pedas</a>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Menu Navigasi">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main style="padding: 60px 0 100px;">
+    <div class="container">
+      <!-- Section Header -->
+      <div class="section-header">
+        <span class="badge">Warisan Kuliner Nusantara</span>
+        <h1>Master Resep <span class="text-gradient">Sambal Indonesia</span></h1>
+        <p>
+          Temukan rahasia kelezatan sambal legendaris Nusantara. Sesuaikan porsi keluarga Anda dan kalkulator kami akan menghitung takaran bahan secara akurat.
+        </p>
+      </div>
+
+      <!-- Culinary Secrets Bar -->
+      <div class="card-glass" style="margin-bottom: 40px; padding: 24px 32px; background: rgba(255, 42, 75, 0.05); border-color: rgba(255, 42, 75, 0.25);">
+        <h3 style="font-size: 1.25rem; margin-bottom: 12px; color: var(--fire-secondary);">✨ Tiga Kunci Emas Sambal Nusantara yang Juara:</h3>
+        <div class="grid-3" style="gap: 20px; font-size: 0.92rem;">
+          <div>
+            <strong style="color: #fff;">1. Cobek Batu Asli:</strong>
+            <p style="margin-top: 4px;">Ulekan batu pori alami melumat sel cabai secara mekanis sehingga minyak atsiri dan saripati pedas terekstrak tanpa memicu buih getir seperti pada blender pisau tinggi.</p>
+          </div>
+          <div>
+            <strong style="color: #fff;">2. Minyak Kelapa Murni:</strong>
+            <p style="margin-top: 4px;">Minyak kelapa tradisional (bukan minyak sawit) memberikan aroma gurih manis khas yang mengikat senyawa pedas capsaicin di lidah dengan sensasi creamy alami.</p>
+          </div>
+          <div>
+            <strong style="color: #fff;">3. Keseimbangan Asam & Terasi:</strong>
+            <p style="margin-top: 4px;">Perasan jeruk limau / purut serta terasi bakar berkualitas memicu pelepasan umami alami (glutamat) yang membuat rasa pedas terasa nikmat dan membangkitkan nafsu makan.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Recipe Category Filters -->
+      <div class="filter-bar">
+        <div class="filter-pills" role="toolbar" aria-label="Filter Resep Sambal">
+          <button class="filter-btn recipe-filter-btn active" data-category="all">Semua Resep</button>
+          <button class="filter-btn recipe-filter-btn" data-category="matang">Sambal Matang / Goreng</button>
+          <button class="filter-btn recipe-filter-btn" data-category="mentah">Sambal Segar / Mentah</button>
+          <button class="filter-btn recipe-filter-btn" data-category="daerah">Khas Tradisional Daerah</button>
+        </div>
+        <div style="font-size: 0.88rem; color: var(--text-dim);">
+          💡 Gunakan tombol <strong>+ / -</strong> pada resep untuk menyesuaikan jumlah porsi.
+        </div>
+      </div>
+
+      <!-- Recipes Dynamic Grid -->
+      <div class="grid-2" id="recipesContainer">
+        <!-- Akan di-render secara interaktif oleh js/kuliner.js -->
+      </div>
+    </div>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand-logo">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 14.5c0 .83-.67 1.5-1.5 1.5S10 17.33 10 16.5V11c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5v5.5zm4.5-3c0 .83-.67 1.5-1.5 1.5s-1.5-.67-1.5-1.5V11c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5v2.5zM12 7.5c-.83 0-1.5-.67-1.5-1.5S11.17 4.5 12 4.5s1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/>
+            </svg>
+            <span>Cabe<span class="dot">Pedia</span></span>
+          </a>
+          <p>
+            Media edukasi dan ensiklopedia interaktif terdepan yang mendokumentasikan kekayaan cabai Nusantara dan dunia.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navigasi</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="varietas.html">Katalog Varietas</a></li>
+            <li><a href="budidaya.html">Panduan Budidaya</a></li>
+            <li><a href="kuliner.html">Koleksi Resep Sambal</a></li>
+            <li><a href="kontak.html">Lab & Kuis Pedas</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Resep Unggulan</h4>
+          <ul class="footer-links">
+            <li><a href="kuliner.html#recipe-sambal-bawang">Sambal Bawang Surabaya</a></li>
+            <li><a href="kuliner.html#recipe-sambal-matah">Sambal Matah Khas Bali</a></li>
+            <li><a href="kuliner.html#recipe-sambal-terasi">Sambal Terasi Goreng Sunda</a></li>
+            <li><a href="kuliner.html#recipe-sambal-ijo">Sambal Ijo Rumah Makan Padang</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Eksplorasi Lainnya</h4>
+          <ul class="footer-links">
+            <li><a href="varietas.html">Tingkat Pedas Scoville</a></li>
+            <li><a href="budidaya.html#calcSection">Kalkulator Tanam</a></li>
+            <li><a href="kontak.html">Kuis Toleransi Pedas</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 CabePedia Indonesia. Seluruh hak cipta dilindungi.</p>
+        <p>Resep Sambal Tradisional Nusantara & Takaran Porsi Dinamis.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/kuliner.js"></script>
+</body>
+</html>

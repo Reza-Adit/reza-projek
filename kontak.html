@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lab Pedas, Kuis Toleransi & Kontak - CabePedia</title>
+  <meta name="description" content="Uji level toleransi pedas lidahmu dengan kuis interaktif, pelajari sains penawar capsaicin, dan hubungi tim kurator komunitas CabePedia.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌶️</text></svg>">
+</head>
+<body>
+  <div class="ambient-glow"></div>
+
+  <!-- Site Navigation -->
+  <header class="site-header">
+    <div class="container navbar">
+      <a href="index.html" class="brand-logo" id="logoLink">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 14.5c0 .83-.67 1.5-1.5 1.5S10 17.33 10 16.5V11c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5v5.5zm4.5-3c0 .83-.67 1.5-1.5 1.5s-1.5-.67-1.5-1.5V11c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5v2.5zM12 7.5c-.83 0-1.5-.67-1.5-1.5S11.17 4.5 12 4.5s1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/>
+        </svg>
+        <span>Cabe<span class="dot">Pedia</span></span>
+      </a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" class="nav-link">Beranda</a></li>
+        <li><a href="varietas.html" class="nav-link">Varietas & Scoville</a></li>
+        <li><a href="budidaya.html" class="nav-link">Panduan Budidaya</a></li>
+        <li><a href="kuliner.html" class="nav-link">Resep Sambal</a></li>
+        <li><a href="kontak.html" class="nav-link active">Lab & Kuis Pedas</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <a href="#quizSection" class="btn btn-primary btn-sm" id="ctaHeaderBtn">Mulai Kuis</a>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Menu Navigasi">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main style="padding: 60px 0 100px;">
+    <div class="container">
+      <!-- Section Header -->
+      <div class="section-header">
+        <span class="badge">Laboratorium Rasa & Komunitas</span>
+        <h1>Lab Pedas & <span class="text-gradient">Kuis Toleransi</span></h1>
+        <p>
+          Uji kapasitas ketahanan lidahmu terhadap molekul capsaicin, pelajari sains di balik penawar pedas, serta hubungi komunitas pecinta cabai.
+        </p>
+      </div>
+
+      <!-- Feature 1: Spicy Tolerance Quiz -->
+      <section class="quiz-container" id="quizSection">
+        <div style="text-align: center; max-width: 680px; margin: 0 auto 36px;">
+          <span class="badge" style="margin-bottom: 8px;">Uji Kepribadian Pedas</span>
+          <h2 style="font-size: 1.8rem;">Kuis: Di Level Mana Ketahanan Pedas Lidahmu?</h2>
+          <p style="color: var(--text-muted); font-size: 0.95rem;">
+            Pilih respons yang paling menggambarkan kebiasaan makanmu sehari-hari. Algoritma kami akan memetakan level Scoville yang mampu kamu taklukkan!
+          </p>
+        </div>
+
+        <form id="quizForm">
+          <!-- Diisi secara interaktif oleh js/kontak.js -->
+        </form>
+
+        <div id="quizResultBox" class="quiz-result-box" style="margin-top: 36px;"></div>
+      </section>
+
+      <!-- Feature 2: Science of Capsaicin Neutralizers -->
+      <section class="card-glass" id="reliefSection" style="margin-bottom: 60px; padding: 40px;">
+        <div style="max-width: 680px; margin: 0 auto 28px; text-align: center;">
+          <span class="badge" style="margin-bottom: 8px;">Sains Biokimia</span>
+          <h2 style="font-size: 1.8rem;">Simulasi Sains: Apa Penawar Terampuh Saat Kepedasan?</h2>
+          <p style="color: var(--text-muted); font-size: 0.95rem;">
+            Klik salah satu penawar di bawah ini untuk melihat efektivitas molekuler dan penjelasannya berdasarkan reaksi kimia:
+          </p>
+        </div>
+
+        <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-bottom: 24px;">
+          <button class="filter-btn relief-item-btn active" data-relief="susu">🥛 Susu / Dairy (Kasein)</button>
+          <button class="filter-btn relief-item-btn" data-relief="gula">🍯 Gula / Madu</button>
+          <button class="filter-btn relief-item-btn" data-relief="air_dingin">🧊 Air Dingin / Es Batu</button>
+          <button class="filter-btn relief-item-btn" data-relief="hangat">☕ Teh Hangat</button>
+        </div>
+
+        <div id="reliefExplanation" style="background: var(--bg-elevated); border: 1px solid var(--border-glass); border-radius: var(--radius-md); padding: 24px; max-width: 760px; margin: 0 auto;">
+          <h4 style="color: #34d399; margin-bottom: 8px;">🥛 Susu / Produk Olahan Susu (Efektivitas: 98% - Terbaik!)</h4>
+          <p style="font-size: 0.95rem; color: #d1d5db; line-height: 1.6;">
+            Susu mengandung protein bernama KASEIN. Capsaicin adalah molekul non-polar berminyak yang tidak larut air, tetapi kasein mampu mengikat molekul capsaicin dan melarutkannya dari reseptor TRPV1 di lidahmu seperti sabun membersihkan minyak.
+          </p>
+        </div>
+      </section>
+
+      <!-- Feature 3: Contact & Community Form -->
+      <section class="card-glass" style="padding: 40px;">
+        <div class="grid-2" style="align-items: center; gap: 48px;">
+          <div>
+            <span class="badge" style="margin-bottom: 12px;">Terhubung Bersama Kami</span>
+            <h2 style="font-size: 2rem; margin-bottom: 16px;">Bergabung dengan Komunitas CabePedia</h2>
+            <p style="margin-bottom: 24px; font-size: 1rem; color: #d1d5db;">
+              Punya varietas cabe langka di daerahmu? Ingin bertukar bibit tanaman, membagikan resep sambal rahasia keluarga, atau bertanya seputar perawatan tanaman?
+            </p>
+
+            <div style="display: flex; flex-direction: column; gap: 16px; font-size: 0.92rem; color: var(--text-muted);">
+              <div style="display: flex; align-items: center; gap: 12px;">
+                <span style="font-size: 1.3rem;">📍</span>
+                <span>Sekretariat Komunitas: Jakarta & Tapin, Indonesia</span>
+              </div>
+              <div style="display: flex; align-items: center; gap: 12px;">
+                <span style="font-size: 1.3rem;">✉️</span>
+                <span>Email Kurator: redaksi@cabepedia.id</span>
+              </div>
+              <div style="display: flex; align-items: center; gap: 12px;">
+                <span style="font-size: 1.3rem;">💬</span>
+                <span>Grup Diskusi Petani & Kolektor: Komunitas Cabai Nusantara</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Form Element -->
+          <div style="background: var(--bg-elevated); border: 1px solid var(--border-glass); border-radius: var(--radius-md); padding: 32px;">
+            <form id="contactForm">
+              <div class="form-group">
+                <label for="nameInput">Nama Lengkap:</label>
+                <input type="text" id="nameInput" class="form-control" placeholder="Contoh: Budi Santoso" required />
+              </div>
+
+              <div class="form-group">
+                <label for="emailInput">Alamat Email:</label>
+                <input type="email" id="emailInput" class="form-control" placeholder="nama@email.com" required />
+              </div>
+
+              <div class="form-group">
+                <label for="interestSelect">Minat Utama:</label>
+                <select id="interestSelect" class="form-control">
+                  <option value="farming">Urban Farming & Budidaya Cabe</option>
+                  <option value="culinary">Kuliner Sambal & Resep Pedas</option>
+                  <option value="collector">Kolektor Bibit Cabe Ekstrem</option>
+                  <option value="research">Penelitian Biokimia & Scoville</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="messageInput">Pesan atau Ulasan Cabe Anda:</label>
+                <textarea id="messageInput" class="form-control" rows="4" placeholder="Tuliskan pengalaman, resep, atau pertanyaanmu di sini..." required style="resize: vertical;"></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary" style="width: 100%;">
+                Kirimkan Pesan ke CabePedia 🚀
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- Modal Backdrop for Confirmation -->
+  <div class="modal-backdrop" id="chiliModal" role="dialog" aria-modal="true">
+    <div class="modal-dialog">
+      <button class="modal-close" onclick="closeChiliModal()" aria-label="Tutup Dialog">
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" style="width: 20px; height: 20px;">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+        </svg>
+      </button>
+      <div id="modalContent"></div>
+    </div>
+  </div>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand-logo">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 14.5c0 .83-.67 1.5-1.5 1.5S10 17.33 10 16.5V11c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5v5.5zm4.5-3c0 .83-.67 1.5-1.5 1.5s-1.5-.67-1.5-1.5V11c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5v2.5zM12 7.5c-.83 0-1.5-.67-1.5-1.5S11.17 4.5 12 4.5s1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/>
+            </svg>
+            <span>Cabe<span class="dot">Pedia</span></span>
+          </a>
+          <p>
+            Media edukasi dan ensiklopedia interaktif terdepan yang mendokumentasikan kekayaan cabai Nusantara dan dunia.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navigasi</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="varietas.html">Katalog Varietas</a></li>
+            <li><a href="budidaya.html">Panduan Budidaya</a></li>
+            <li><a href="kuliner.html">Koleksi Resep Sambal</a></li>
+            <li><a href="kontak.html">Lab & Kuis Pedas</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Koleksi Cabai</h4>
+          <ul class="footer-links">
+            <li><a href="varietas.html">Cabe Rawit Merah</a></li>
+            <li><a href="varietas.html">Cabe Katokkon Toraja</a></li>
+            <li><a href="varietas.html">Cabe Hiyung Banjar</a></li>
+            <li><a href="varietas.html">Jalapeño Meksiko</a></li>
+            <li><a href="varietas.html">Carolina Reaper</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Eksplorasi Fitur</h4>
+          <ul class="footer-links">
+            <li><a href="#quizSection">Kuis Toleransi Pedas</a></li>
+            <li><a href="#reliefSection">Simulasi Penawar Capsaicin</a></li>
+            <li><a href="varietas.html#comparatorSection">Komparator Scoville</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 CabePedia Indonesia. Seluruh hak cipta dilindungi.</p>
+        <p>Laboratorium Sains Pedas & Komunitas Pecinta Cabai Nusantara.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/kontak.js"></script>
+</body>
+</html>

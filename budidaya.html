@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panduan Praktis Budidaya Cabai - CabePedia</title>
+  <meta name="description" content="Cara menanam dan merawat pohon cabe di polybag dan pekarangan rumah. Dilengkapi kalkulator kebutuhan pupuk, media tanam, dan panduan atasi hama patek.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌶️</text></svg>">
+</head>
+<body>
+  <div class="ambient-glow"></div>
+
+  <!-- Site Navigation -->
+  <header class="site-header">
+    <div class="container navbar">
+      <a href="index.html" class="brand-logo" id="logoLink">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 14.5c0 .83-.67 1.5-1.5 1.5S10 17.33 10 16.5V11c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5v5.5zm4.5-3c0 .83-.67 1.5-1.5 1.5s-1.5-.67-1.5-1.5V11c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5v2.5zM12 7.5c-.83 0-1.5-.67-1.5-1.5S11.17 4.5 12 4.5s1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/>
+        </svg>
+        <span>Cabe<span class="dot">Pedia</span></span>
+      </a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" class="nav-link">Beranda</a></li>
+        <li><a href="varietas.html" class="nav-link">Varietas & Scoville</a></li>
+        <li><a href="budidaya.html" class="nav-link active">Panduan Budidaya</a></li>
+        <li><a href="kuliner.html" class="nav-link">Resep Sambal</a></li>
+        <li><a href="kontak.html" class="nav-link">Lab & Kuis Pedas</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <a href="kontak.html" class="btn btn-primary btn-sm" id="ctaHeaderBtn">Uji Toleransi Pedas</a>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Menu Navigasi">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main style="padding: 60px 0 100px;">
+    <div class="container">
+      <!-- Section Header -->
+      <div class="section-header">
+        <span class="badge">Agrikultur & Urban Farming</span>
+        <h1>Panduan Praktis <span class="text-gradient">Budidaya Cabai</span></h1>
+        <p>
+          Teknik lengkap menanam cabai dari benih hingga panen melimpah, baik di pot teras rumah, polybag, maupun kebun pekarangan.
+        </p>
+      </div>
+
+      <!-- Growth Journey 5 Steps -->
+      <h2 style="font-size: 1.6rem; text-align: center; margin-bottom: 8px;">Tahapan Siklus Hidup Tanaman Cabai</h2>
+      <p style="text-align: center; color: var(--text-muted); margin-bottom: 24px;">Dari benih kecil menjadi pohon rimbun sarat buah pedas.</p>
+
+      <div class="growth-timeline">
+        <div class="growth-step">
+          <div class="step-num">1</div>
+          <h4>Penyemaian Benih</h4>
+          <span class="duration">Hari ke 1 - 14</span>
+          <p>Rendam biji cabai dalam air hangat 3-4 jam. Semai di tray dengan cocopeat dan kompos hingga tumbuh 4 daun sejati.</p>
+        </div>
+
+        <div class="growth-step">
+          <div class="step-num">2</div>
+          <h4>Pindah Tanam</h4>
+          <span class="duration">Hari ke 15 - 25</span>
+          <p>Pindahkan bibit sehat ke polybag ukuran minimal 35x35 cm atau bedengan kebun. Lakukan di sore hari agar bibit tidak layu stres.</p>
+        </div>
+
+        <div class="growth-step">
+          <div class="step-num">3</div>
+          <h4>Fase Vegetatif</h4>
+          <span class="duration">Hari ke 26 - 55</span>
+          <p>Pertumbuhan batang dan daun aktif. Berikan pupuk tinggi Nitrogen & NPK berimbang, pasang ajir bambu penopang.</p>
+        </div>
+
+        <div class="growth-step">
+          <div class="step-num">4</div>
+          <h4>Fase Pembungaan</h4>
+          <span class="duration">Hari ke 56 - 75</span>
+          <p>Bunga putih mulai bermekaran. Tambahkan pupuk unsur Kalium dan Fosfat (K & P) agar bunga tidak rontok dan membentuk buah lebat.</p>
+        </div>
+
+        <div class="growth-step">
+          <div class="step-num">5</div>
+          <h4>Masa Panen</h4>
+          <span class="duration">Hari ke 80 - 150+</span>
+          <p>Petik cabai beserta tangkainya di pagi hari setelah embun kering. Panen dapat diulang setiap 5-7 hari sekali selama beberapa bulan!</p>
+        </div>
+      </div>
+
+      <!-- Interactive Calculator Section -->
+      <section class="calc-card" id="calcSection" style="margin-top: 60px;">
+        <div style="margin-bottom: 30px;">
+          <span class="badge" style="margin-bottom: 8px;">Alat Bantu Interaktif</span>
+          <h2 style="font-size: 1.8rem;">Kalkulator Kebutuhan Tanam & Estimasi Panen</h2>
+          <p style="color: var(--text-muted);">
+            Masukkan target jumlah pohon cabai Anda, dan sistem akan menghitung kebutuhan media, pupuk, air, serta prediksi total panen.
+          </p>
+        </div>
+
+        <div class="calc-grid">
+          <div class="calc-inputs">
+            <div class="form-group">
+              <label for="plantCount">Jumlah Pohon Cabai yang Ditanam:</label>
+              <input type="number" id="plantCount" class="form-control" value="5" min="1" max="1000" />
+              <small style="color: var(--text-dim); display: block; margin-top: 4px;">Contoh: 5 pohon untuk konsumsi keluarga harian.</small>
+            </div>
+
+            <div class="form-group">
+              <label for="plantMedium">Wadah Media Tanam:</label>
+              <select id="plantMedium" class="form-control">
+                <option value="polybag">Polybag / Pot 35-40 cm (Urban / Teras)</option>
+                <option value="lahan">Bedengan Tanah Terbuka / Kebun</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="chiliType">Varietas Cabai yang Dipilih:</label>
+              <select id="chiliType" class="form-control">
+                <option value="rawit">Cabe Rawit Merah (Bird's Eye)</option>
+                <option value="keriting">Cabe Merah Keriting</option>
+                <option value="katokkon">Cabe Katokkon Toraja</option>
+                <option value="habanero">Habanero Pepper</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="calc-results">
+            <div>
+              <h4 style="font-size: 1.1rem; color: #fff; margin-bottom: 16px; border-bottom: 1px solid var(--border-glass); padding-bottom: 10px;">
+                📊 Hasil Analisis Kebutuhan Agrikultur:
+              </h4>
+
+              <div class="result-item">
+                <span>Media Tanam Dibutuhkan:</span>
+                <span class="result-val" id="resSoil">30 kg</span>
+              </div>
+
+              <div class="result-item">
+                <span>Total Pupuk NPK 16-16-16:</span>
+                <span class="result-val" id="resFertilizer">0.30 kg</span>
+              </div>
+
+              <div class="result-item">
+                <span>Kebutuhan Siram Air:</span>
+                <span class="result-val" id="resWater">3.0 Liter / hari</span>
+              </div>
+
+              <div class="result-item">
+                <span>Waktu Panen Perdana:</span>
+                <span class="result-val" id="resHarvestTime" style="color: var(--fire-accent);">75 - 85 Hari</span>
+              </div>
+
+              <div class="result-item">
+                <span>Potensi Total Hasil Panen:</span>
+                <span class="result-val" id="resYield" style="color: #34d399;">± 4.5 kg buah</span>
+              </div>
+            </div>
+
+            <div style="background: rgba(255, 42, 75, 0.08); padding: 12px 16px; border-radius: var(--radius-sm); border: 1px dashed rgba(255, 42, 75, 0.3); margin-top: 16px; font-size: 0.85rem; color: var(--text-muted);">
+              💡 <strong>Tips Ahli:</strong> Siram tanaman cabai di pagi hari pada area perakaran, hindari membasahi daun secara berlebihan untuk mencegah jamur.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Pest and Disease Management Section -->
+      <section style="margin-top: 70px;">
+        <div class="section-header">
+          <span class="badge">Proteksi Tanaman</span>
+          <h2>Mengatasi 3 Musuh Utama Pohon Cabai</h2>
+          <p>Deteksi dini gejala hama umum dan solusi organik yang aman tanpa bahan kimia keras.</p>
+        </div>
+
+        <div class="grid-3">
+          <div class="card-glass">
+            <div style="font-size: 1.8rem; margin-bottom: 12px;">🍂</div>
+            <h3 style="font-size: 1.25rem; margin-bottom: 8px;">Patek / Antraknosa (Jamur)</h3>
+            <p style="font-size: 0.9rem; margin-bottom: 12px; color: var(--text-muted);">
+              <strong>Gejala:</strong> Bercak hitam melingkar cekung pada buah cabai yang membusuk dan mengering sebelum sempat matang.
+            </p>
+            <div style="font-size: 0.85rem; color: var(--fire-secondary);">
+              <strong>Solusi:</strong> Petik dan buang buah yang terkena patek (jangan dikompos). Semprot larutan fungisida nabati rebusan daun sirih dan serai.
+            </div>
+          </div>
+
+          <div class="card-glass">
+            <div style="font-size: 1.8rem; margin-bottom: 12px;">🦟</div>
+            <h3 style="font-size: 1.25rem; margin-bottom: 8px;">Kutu Kebul & Kutu Daun (Afid)</h3>
+            <p style="font-size: 0.9rem; margin-bottom: 12px; color: var(--text-muted);">
+              <strong>Gejala:</strong> Kawanan serangga putih kecil di balik daun, daun menjadi berlendir dan timbul jelaga hitam berdebu.
+            </p>
+            <div style="font-size: 0.85rem; color: var(--fire-secondary);">
+              <strong>Solusi:</strong> Semprotkan larutan sabun cuci piring lembut (sunlight 5ml/liter air) ditambah minyak nimba (neem oil) di balik daun.
+            </div>
+          </div>
+
+          <div class="card-glass">
+            <div style="font-size: 1.8rem; margin-bottom: 12px;">🌱</div>
+            <h3 style="font-size: 1.25rem; margin-bottom: 8px;">Trips & Daun Keriting Melinting</h3>
+            <p style="font-size: 0.9rem; margin-bottom: 12px; color: var(--text-muted);">
+              <strong>Gejala:</strong> Pucuk daun melengkung ke atas seperti sendok dan kerdil, pertumbuhan tanaman terhenti.
+            </p>
+            <div style="font-size: 0.85rem; color: var(--fire-secondary);">
+              <strong>Solusi:</strong> Pasang perangkap lekat kuning (yellow sticky trap) dan semprot ekstrak air rendaman tembakau dan bawang putih.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ Accordion -->
+      <section style="margin-top: 80px;">
+        <div class="section-header">
+          <span class="badge">Tanya Jawab</span>
+          <h2>Pertanyaan Umum Seputar Menanam Cabai</h2>
+        </div>
+
+        <div class="accordion" style="max-width: 800px; margin: 0 auto;">
+          <div class="accordion-item">
+            <div class="accordion-header">
+              <span>Berapa jam sinar matahari langsung yang dibutuhkan pohon cabai?</span>
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </div>
+            <div class="accordion-body">
+              <p>Pohon cabai membutuhkan sinar matahari penuh minimal 6 hingga 8 jam setiap hari. Tanpa paparan sinar matahari yang cukup, batang akan tumbuh kurus meninggi (etiolasi) dan bunga akan mudah rontok tanpa membentuk buah.</p>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <div class="accordion-header">
+              <span>Mengapa bunga cabai sering rontok sebelum menjadi buah?</span>
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </div>
+            <div class="accordion-body">
+              <p>Penyebab paling umum adalah kekurangan unsur hara Kalium (K) dan Kalsium (Ca), kelebihan pupuk Nitrogen yang memicu daun saja, atau cuaca yang terlalu ekstrem (suhu di atas 35°C atau media terlalu becek). Tambahkan pupuk KCL atau kulit telur sangrai yang dihaluskan.</p>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <div class="accordion-header">
+              <span>Apakah biji dari cabai yang kita beli di pasar bisa langsung ditanam?</span>
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </div>
+            <div class="accordion-body">
+              <p>Bisa, pilihlah buah cabai yang benar-benar merah tua matang sempurna dan bebas cacat. Belah dan ambil bijinya, rendam di air (buang biji yang terapung karena kopong), lalu kering-anginkan selama 1-2 hari sebelum disemai.</p>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <div class="accordion-header">
+              <span>Berapa lama umur produktif satu tanaman pohon cabe rawit?</span>
+              <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+            </div>
+            <div class="accordion-body">
+              <p>Dengan pemangkasan (pruning) cabang tua secara berkala dan pemupukan organik yang baik, pohon cabe rawit dapat bertahan produktif selama 1,5 hingga 2 tahun dan dipanen puluhan kali.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand-logo">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 14.5c0 .83-.67 1.5-1.5 1.5S10 17.33 10 16.5V11c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5v5.5zm4.5-3c0 .83-.67 1.5-1.5 1.5s-1.5-.67-1.5-1.5V11c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5v2.5zM12 7.5c-.83 0-1.5-.67-1.5-1.5S11.17 4.5 12 4.5s1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/>
+            </svg>
+            <span>Cabe<span class="dot">Pedia</span></span>
+          </a>
+          <p>
+            Media edukasi dan ensiklopedia interaktif terdepan yang mendokumentasikan kekayaan cabai Nusantara dan dunia.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navigasi</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="varietas.html">Katalog Varietas</a></li>
+            <li><a href="budidaya.html">Panduan Budidaya</a></li>
+            <li><a href="kuliner.html">Koleksi Resep Sambal</a></li>
+            <li><a href="kontak.html">Lab & Kuis Pedas</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Koleksi Cabai</h4>
+          <ul class="footer-links">
+            <li><a href="varietas.html">Cabe Rawit Merah</a></li>
+            <li><a href="varietas.html">Cabe Katokkon Toraja</a></li>
+            <li><a href="varietas.html">Cabe Hiyung Banjar</a></li>
+            <li><a href="varietas.html">Jalapeño Meksiko</a></li>
+            <li><a href="varietas.html">Carolina Reaper</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Tautan Praktis</h4>
+          <ul class="footer-links">
+            <li><a href="varietas.html#comparatorSection">Komparator Scoville</a></li>
+            <li><a href="kuliner.html">Kalkulator Resep Sambal</a></li>
+            <li><a href="kontak.html">Kuis Toleransi Pedas</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 CabePedia Indonesia. Seluruh hak cipta dilindungi.</p>
+        <p>Panduan Budidaya Cabe Rumahan & Urban Farming Indonesia.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/budidaya.js"></script>
+</body>
+</html>

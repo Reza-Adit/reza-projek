@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CabePedia - Ensiklopedia & Eksplorasi Cabe Terlengkap</title>
+  <meta name="description" content="Portal panduan lengkap dunia cabai di Indonesia dan dunia. Pelajari varietas cabe, skala Scoville, cara budidaya di rumah, dan resep sambal nusantara.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌶️</text></svg>">
+</head>
+<body>
+  <div class="ambient-glow"></div>
+
+  <!-- Site Navigation -->
+  <header class="site-header">
+    <div class="container navbar">
+      <a href="index.html" class="brand-logo" id="logoLink">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 14.5c0 .83-.67 1.5-1.5 1.5S10 17.33 10 16.5V11c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5v5.5zm4.5-3c0 .83-.67 1.5-1.5 1.5s-1.5-.67-1.5-1.5V11c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5v2.5zM12 7.5c-.83 0-1.5-.67-1.5-1.5S11.17 4.5 12 4.5s1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/>
+        </svg>
+        <span>Cabe<span class="dot">Pedia</span></span>
+      </a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" class="nav-link active">Beranda</a></li>
+        <li><a href="varietas.html" class="nav-link">Varietas & Scoville</a></li>
+        <li><a href="budidaya.html" class="nav-link">Panduan Budidaya</a></li>
+        <li><a href="kuliner.html" class="nav-link">Resep Sambal</a></li>
+        <li><a href="kontak.html" class="nav-link">Lab & Kuis Pedas</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <a href="kontak.html" class="btn btn-primary btn-sm" id="ctaHeaderBtn">Uji Toleransi Pedas</a>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Menu Navigasi">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <main>
+    <section class="hero-section">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="badge">🔥 Ensiklopedia Cabai Nusantara & Dunia</div>
+          <h1>Sensasi <span class="text-gradient">Pedas Membara</span> & Rahasia Emas Cabai</h1>
+          <p class="hero-lead">
+            Menyelami anatomi rasa cabai, tingkat kepedasan Scoville internasional, teknik budidaya organik di rumah, hingga mahakarya resep sambal warisan Nusantara.
+          </p>
+
+          <div class="hero-cta">
+            <a href="varietas.html" class="btn btn-primary btn-lg" id="exploreChiliBtn">
+              Jelajahi Varietas Cabai 🌶️
+            </a>
+            <a href="budidaya.html" class="btn btn-secondary btn-lg" id="farmingGuideBtn">
+              Panduan Menanam
+            </a>
+          </div>
+
+          <div class="hero-stats">
+            <div class="stat-item">
+              <h4>2.2M+</h4>
+              <p>SHU Rekor Tertinggi (Carolina Reaper)</p>
+            </div>
+            <div class="stat-item">
+              <h4>50+</h4>
+              <p>Varietas Cabai Lokal & Global Terdata</p>
+            </div>
+            <div class="stat-item">
+              <h4>300+</h4>
+              <p>Varian Sambal Tradisional Indonesia</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="hero-card-frame">
+            <img src="https://images.unsplash.com/photo-1588252303782-cb80119abd6d?auto=format&fit=crop&w=1200&q=80" alt="Koleksi cabe merah segar dan menyala" loading="eager" />
+            <div class="hero-floating-badge">
+              <div class="icon-box">⚡</div>
+              <div>
+                <strong style="color: #fff; font-size: 0.95rem; display: block;">Molekul Ajaib: Capsaicin</strong>
+                <span style="font-size: 0.8rem; color: var(--text-muted);">Memicu pelepasan hormon endorfin & metabolisme tubuh</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quick Scoville Preview Section -->
+    <section style="padding: 40px 0 80px;">
+      <div class="container">
+        <div class="card-glass" style="padding: 36px;">
+          <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; margin-bottom: 20px;">
+            <div>
+              <span class="badge" style="margin-bottom: 8px;">Skala Internasional</span>
+              <h2 style="font-size: 1.8rem;">Peta Skala Kepedasan Scoville (SHU)</h2>
+            </div>
+            <a href="varietas.html" class="btn btn-secondary btn-sm">Lihat Detail Skala Lengkap →</a>
+          </div>
+          <p style="color: var(--text-muted); margin-bottom: 24px;">
+            Diciptakan oleh apoteker Wilbur Scoville pada 1912, satuan Scoville Heat Unit (SHU) mengukur kadar konsentrasi capsaicin dalam cabai.
+          </p>
+
+          <div class="scoville-bar-wrapper">
+            <div class="scoville-spectrum">
+              <div class="scoville-marker" style="left: 45%;" title="Posisi Cabe Rawit Merah (100.000 SHU)"></div>
+            </div>
+            <div class="spectrum-labels">
+              <span><strong>0 SHU</strong><br>Paprika Manis</span>
+              <span><strong>8.000 SHU</strong><br>Jalapeño</span>
+              <span><strong>100.000 SHU</strong><br>Cabe Rawit Merah</span>
+              <span><strong>350.000 SHU</strong><br>Habanero</span>
+              <span><strong>2.200.000+ SHU</strong><br>Carolina Reaper</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mengapa Cabe Memikat Section -->
+    <section style="padding: 40px 0 80px; position: relative;">
+      <div class="container">
+        <div class="section-header">
+          <span class="badge">Sains & Kesehatan</span>
+          <h2>Mengapa Lidah Kita Terobsesi dengan Pedas?</h2>
+          <p>
+            Rasa pedas sebenarnya bukan sebuah rasa seperti manis atau asin, melainkan sinyal temperatur dan rangsangan rasa sakit yang ditransformasi otak menjadi kenikmatan!
+          </p>
+        </div>
+
+        <div class="grid-3">
+          <div class="card-glass">
+            <div style="font-size: 2.2rem; margin-bottom: 16px;">🧠</div>
+            <h3 style="margin-bottom: 12px;">Pelepasan Hormon Bahagia</h3>
+            <p>
+              Saat capsaicin menyentuh reseptor sensorik lidah (TRPV1), otak mengira tubuh sedang kepanasan dan seketika membanjiri peredaran darah dengan hormon endorfin dan dopamin yang menimbulkan rasa senang dan rileks.
+            </p>
+          </div>
+
+          <div class="card-glass">
+            <div style="font-size: 2.2rem; margin-bottom: 16px;">🍊</div>
+            <h3 style="margin-bottom: 12px;">Vitamin C Lebih Tinggi dari Jeruk</h3>
+            <p>
+              Cabai segar memiliki kandungan vitamin C hingga 2-3 kali lipat lebih banyak dibandingkan buah jeruk per 100 gram, serta kaya akan vitamin A, B6, dan antioksidan alami pelindung sel tubuh.
+            </p>
+          </div>
+
+          <div class="card-glass">
+            <div style="font-size: 2.2rem; margin-bottom: 16px;">🔥</div>
+            <h3 style="margin-bottom: 12px;">Pembakar Kalori & Metabolisme</h3>
+            <p>
+              Zat capsaicin merangsang proses termogenesis yang mampu menaikkan laju metabolisme basal hingga 5-10% setelah konsumsi, membantu pembakaran energi dan menjaga sirkulasi darah tetap lancar.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portal Features 4 Highlights -->
+    <section style="padding: 40px 0 100px;">
+      <div class="container">
+        <div class="section-header">
+          <span class="badge">Jelajahi Portal</span>
+          <h2>4 Pilar Utama di CabePedia</h2>
+          <p>Temukan panduan, kalkulator interaktif, dan rahasia seputar cabai dalam genggaman Anda.</p>
+        </div>
+
+        <div class="grid-2">
+          <!-- Item 1 -->
+          <div class="card-glass" style="display: flex; gap: 24px; align-items: center;">
+            <img src="https://images.unsplash.com/photo-1597362925123-77861d3fbac7?auto=format&fit=crop&w=300&q=80" alt="Varietas cabe" style="width: 140px; height: 140px; object-fit: cover; border-radius: var(--radius-md); flex-shrink: 0;" />
+            <div>
+              <h3 style="font-size: 1.35rem; margin-bottom: 8px;">Ensiklopedia Varietas</h3>
+              <p style="font-size: 0.92rem; margin-bottom: 14px;">Kenali profil pedas dari Cabe Rawit, Katokkon Toraja, Hiyung Banjar, sampai Carolina Reaper.</p>
+              <a href="varietas.html" class="btn btn-secondary btn-sm">Buka Katalog Cabe →</a>
+            </div>
+          </div>
+
+          <!-- Item 2 -->
+          <div class="card-glass" style="display: flex; gap: 24px; align-items: center;">
+            <img src="https://images.unsplash.com/photo-1592187270271-9a4b84faa228?auto=format&fit=crop&w=300&q=80" alt="Tanaman cabai berbuah" style="width: 140px; height: 140px; object-fit: cover; border-radius: var(--radius-md); flex-shrink: 0;" />
+            <div>
+              <h3 style="font-size: 1.35rem; margin-bottom: 8px;">Budidaya Cabe Rumahan</h3>
+              <p style="font-size: 0.92rem; margin-bottom: 14px;">Kalkulator kebutuhan media tanam polybag, jadwal pupuk NPK, dan penanganan hama kutu kebul.</p>
+              <a href="budidaya.html" class="btn btn-secondary btn-sm">Mulai Menanam →</a>
+            </div>
+          </div>
+
+          <!-- Item 3 -->
+          <div class="card-glass" style="display: flex; gap: 24px; align-items: center;">
+            <img src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?auto=format&fit=crop&w=300&q=80" alt="Resep sambal lezat" style="width: 140px; height: 140px; object-fit: cover; border-radius: var(--radius-md); flex-shrink: 0;" />
+            <div>
+              <h3 style="font-size: 1.35rem; margin-bottom: 8px;">Master Resep Sambal</h3>
+              <p style="font-size: 0.92rem; margin-bottom: 14px;">Resep Sambal Bawang, Sambal Matah, Sambal Terasi dengan kalkulator takaran porsi otomatis.</p>
+              <a href="kuliner.html" class="btn btn-secondary btn-sm">Buka Buku Resep →</a>
+            </div>
+          </div>
+
+          <!-- Item 4 -->
+          <div class="card-glass" style="display: flex; gap: 24px; align-items: center;">
+            <img src="https://images.unsplash.com/photo-1525607551316-4a8e16d1f9ba?auto=format&fit=crop&w=300&q=80" alt="Kuis pedas" style="width: 140px; height: 140px; object-fit: cover; border-radius: var(--radius-md); flex-shrink: 0;" />
+            <div>
+              <h3 style="font-size: 1.35rem; margin-bottom: 8px;">Laboratorium & Kuis Pedas</h3>
+              <p style="font-size: 0.92rem; margin-bottom: 14px;">Ukur toleransi lidahmu melalui 5 pertanyaan interaktif dan pelajari penawar pedas berbasis kimiawi.</p>
+              <a href="kontak.html" class="btn btn-secondary btn-sm">Mulai Uji Pedas →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action Banner -->
+    <section class="container" style="margin-bottom: 60px;">
+      <div class="card-glass text-center" style="background: linear-gradient(135deg, rgba(255, 42, 75, 0.15), rgba(255, 94, 54, 0.08)); border: 1px solid var(--border-fire); padding: 50px 30px;">
+        <span class="badge" style="margin-bottom: 16px;">Tantangan Penggemar Pedas</span>
+        <h2 style="margin-bottom: 16px;">Seberapa Kuat Toleransi Lidahmu Terhadap Cabai?</h2>
+        <p style="max-width: 620px; margin: 0 auto 30px; font-size: 1.05rem;">
+          Apakah kamu masih berada di level "Lidah Susu" atau sudah layak dijuluki sebagai "Dewa Cabai Api Abadi"? Temukan jawabannya sekarang juga!
+        </p>
+        <a href="kontak.html" class="btn btn-primary btn-lg" id="quizActionBtn">
+          Ikuti Kuis Toleransi Pedas Sekarang (Gratis) 🔥
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand-logo">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 14.5c0 .83-.67 1.5-1.5 1.5S10 17.33 10 16.5V11c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5v5.5zm4.5-3c0 .83-.67 1.5-1.5 1.5s-1.5-.67-1.5-1.5V11c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5v2.5zM12 7.5c-.83 0-1.5-.67-1.5-1.5S11.17 4.5 12 4.5s1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/>
+            </svg>
+            <span>Cabe<span class="dot">Pedia</span></span>
+          </a>
+          <p>
+            Media edukasi dan ensiklopedia interaktif terdepan yang mendokumentasikan kekayaan cabai Nusantara dan dunia.
+          </p>
+          <span style="font-size: 0.85rem; color: var(--fire-accent);">🌶️ Menghargai setiap bulir pedas Nusantara</span>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navigasi</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="varietas.html">Katalog Varietas</a></li>
+            <li><a href="budidaya.html">Panduan Budidaya</a></li>
+            <li><a href="kuliner.html">Koleksi Resep Sambal</a></li>
+            <li><a href="kontak.html">Lab & Kuis Pedas</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Varietas Populer</h4>
+          <ul class="footer-links">
+            <li><a href="varietas.html">Cabe Rawit Merah</a></li>
+            <li><a href="varietas.html">Cabe Katokkon Toraja</a></li>
+            <li><a href="varietas.html">Cabe Hiyung Banjar</a></li>
+            <li><a href="varietas.html">Jalapeño Meksiko</a></li>
+            <li><a href="varietas.html">Carolina Reaper</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Fitur Interaktif</h4>
+          <ul class="footer-links">
+            <li><a href="varietas.html#comparatorSection">Komparator Scoville</a></li>
+            <li><a href="budidaya.html#calcSection">Kalkulator Tanam & Pupuk</a></li>
+            <li><a href="kuliner.html">Kalkulator Porsi Sambal</a></li>
+            <li><a href="kontak.html#quizSection">Kuis Toleransi Pedas</a></li>
+            <li><a href="kontak.html#reliefSection">Simulasi Penawar Capsaicin</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 CabePedia Indonesia. Seluruh hak cipta dilindungi.</p>
+        <p>Dirancang dengan cita rasa pedas & visual modern.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
